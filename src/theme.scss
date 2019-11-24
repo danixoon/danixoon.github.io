@@ -1,0 +1,70 @@
+$primary-color: #ff612d;
+$secondary-color: #4c75a3;
+$text-color: #5c5c5c;
+
+$gradinet-end-color: #ff2e2e;
+$gradient-start-color: #ff9f2e;
+
+$font-medium: 26px;
+$font-large: 36px;
+$font-larger: 48px;
+$font-max: 54px;
+
+.text-thin {
+  font-weight: 100;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-block {
+  display: block;
+}
+
+.container {
+  width: 1080px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  @extend .text-light;
+
+  color: $text-color;
+
+  font-family: "Roboto", sans-serif;
+  font-size: $font-medium;
+}
+
+h2 {
+  @extend .text-thin;
+  font-size: $font-max;
+}
+
+hr {
+  max-width: 434px;
+  margin: 3rem auto;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $gradinet-end-color;
+  }
+}
