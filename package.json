@@ -2,7 +2,7 @@
   "name": "danixoon.github.io",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://danixoon.github.io/owo",
+  "homepage": "https://danixoon.github.io",
   "dependencies": {
     "@types/jest": "24.0.23",
     "@types/node": "12.12.12",
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build --branch master --repo https://github.com/danixoon/danixoon.github.io",
+    "deploy": "gh-pages -d build --branch master",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
