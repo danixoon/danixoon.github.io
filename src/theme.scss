@@ -1,14 +1,24 @@
 $primary-color: #ff612d;
 $secondary-color: #4c75a3;
 $text-color: #5c5c5c;
+$dark-color: #393939;
+$light-color: white;
 
-$gradinet-end-color: #ff2e2e;
-$gradient-start-color: #ff9f2e;
+$active-color: #ff2e2e;
+$passive-color: #ff9f2e;
 
 $font-medium: 26px;
 $font-large: 36px;
 $font-larger: 48px;
 $font-max: 54px;
+
+.color-primary {
+  color: $primary-color;
+}
+
+.color-text {
+  color: $text-color;
+}
 
 .text-thin {
   font-weight: 100;
@@ -34,8 +44,12 @@ $font-max: 54px;
   display: block;
 }
 
-.container {
+.responsive {
   width: 1080px;
+}
+
+.h-100 {
+  height: 100%;
 }
 
 body {
@@ -55,6 +69,14 @@ h2 {
   font-size: $font-max;
 }
 
+strong {
+  @extend .text-bold;
+}
+
+ul {
+  margin: 0;
+}
+
 hr {
   max-width: 434px;
   margin: 3rem auto;
@@ -64,11 +86,13 @@ a {
   color: $primary-color;
   text-decoration: none;
 
+  display: block;
+
   transition: transform 0.1s ease-in-out;
   box-sizing: border-box;
 
   &:hover {
-    color: $gradinet-end-color;
+    color: $active-color;
     transform: translateY(-5px);
     text-decoration: underline;
   }
