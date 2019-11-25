@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ce77850bac5da811e098685607710a32",
+    "revision": "cd97b7245713e0a48109673f9f9becda",
     "url": "/index.html"
   },
   {
-    "revision": "f2705b7cfa708ca6d59f",
-    "url": "/static/css/main.28e6cfa7.chunk.css"
+    "revision": "ab9c003fa6018f343853",
+    "url": "/static/css/main.9ab9be32.chunk.css"
   },
   {
     "revision": "e6164de6338cb81decf6",
     "url": "/static/js/2.c0537b54.chunk.js"
   },
   {
-    "revision": "f2705b7cfa708ca6d59f",
-    "url": "/static/js/main.5b40501e.chunk.js"
+    "revision": "ab9c003fa6018f343853",
+    "url": "/static/js/main.8f39bb83.chunk.js"
   },
   {
     "revision": "3176bbf8c1ce837fb3b0",
     "url": "/static/js/runtime-main.cf6eb703.js"
   },
   {
-    "revision": "4d7ceb0c61b43e0d98a9e2a566a9b625",
-    "url": "/static/media/card-border.4d7ceb0c.svg"
+    "revision": "dc2d4ee32bb1992e5fce8e0c19b2ee32",
+    "url": "/static/media/card-border.dc2d4ee3.svg"
   },
   {
     "revision": "40cc4cd5e2d02f4a3c7280712d33f707",
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/mark.da9cd349.svg"
   },
   {
-    "revision": "8b7897718cd23476a45c1949bc78a2b0",
-    "url": "/static/media/note-corner.8b789771.svg"
+    "revision": "615c58de647a921329f9a49fa5f49dd6",
+    "url": "/static/media/note-corner.615c58de.svg"
   },
   {
     "revision": "e3d3d3cef9e043fdddbb348090720183",
