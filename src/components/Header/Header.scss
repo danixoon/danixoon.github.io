@@ -1,11 +1,11 @@
 .page-header {
-  position: sticky;
-  padding-top: 5rem;
-  top: -5rem;
+  // position: sticky;
+  // padding-top: 5rem;
+  // top: -5rem;
   width: 100%;
 
   background: #ffffff;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   z-index: 100;
 
   display: flex;
@@ -20,7 +20,6 @@
 }
 
 .nav-logo {
-  margin: auto 5rem;
-
-  padding: 1rem 0;
+  margin: auto;
+  padding-top: 5rem;
 }

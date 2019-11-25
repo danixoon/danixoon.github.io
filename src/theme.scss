@@ -3,6 +3,7 @@ $secondary-color: #4c75a3;
 $text-color: #5c5c5c;
 $dark-color: #393939;
 $light-color: white;
+$muted-color: #bfbfbf;
 
 $active-color: #ff2e2e;
 $passive-color: #ff9f2e;
@@ -45,7 +46,11 @@ $font-max: 54px;
 }
 
 .responsive {
-  width: 1080px;
+  max-width: 1080px;
+
+  @media (max-width: 1080px) {
+    overflow: hidden;
+  }
 }
 
 .h-100 {
@@ -80,6 +85,10 @@ ul {
 hr {
   max-width: 434px;
   margin: 3rem auto;
+  background-color: $muted-color;
+  border: none;
+  height: 1px;
+  // border-bottom: 1px solid $text-color;
 }
 
 a {

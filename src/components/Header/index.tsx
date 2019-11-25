@@ -5,8 +5,8 @@ import "./Header.scss";
 
 const Header: React.FC = () => {
   return (
-    <header className="page-header">
-      <a className="nav-item" href="#about-me">
+    <header className="page-header container">
+      {/* <a className="nav-item" href="#about-me">
         Обо мне
       </a>
       <a className="nav-item" href="#">
@@ -14,7 +14,7 @@ const Header: React.FC = () => {
       </a>
       <a className="nav-item" href="#">
         Контакты
-      </a>
+      </a> */}
       <Logo className="nav-logo" />
     </header>
   );

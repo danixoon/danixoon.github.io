@@ -10,7 +10,7 @@ export const Note: React.FC<PropsWithChildren<NoteProps>> = props => {
   return (
     <div {...rest} className="card-note">
       {children}
-      <img style={{ position: "absolute", right: -61, bottom: -61 }} src={noteCorner} />
+        <img style={{ position: "absolute", right: -7, bottom: -7 }} src={noteCorner} />
     </div>
   );
 };
