@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cd97b7245713e0a48109673f9f9becda",
+    "revision": "d95ca534d4bd04b4e3b75e946a438be9",
     "url": "/index.html"
   },
   {
-    "revision": "ab9c003fa6018f343853",
-    "url": "/static/css/main.9ab9be32.chunk.css"
+    "revision": "113e366a7eb342b9ac44",
+    "url": "/static/css/main.e7577ef0.chunk.css"
   },
   {
-    "revision": "e6164de6338cb81decf6",
-    "url": "/static/js/2.c0537b54.chunk.js"
+    "revision": "f47189fe90a5d03680a0",
+    "url": "/static/js/2.de4c862c.chunk.js"
   },
   {
-    "revision": "ab9c003fa6018f343853",
-    "url": "/static/js/main.8f39bb83.chunk.js"
+    "revision": "113e366a7eb342b9ac44",
+    "url": "/static/js/main.b225abeb.chunk.js"
   },
   {
     "revision": "3176bbf8c1ce837fb3b0",
@@ -22,6 +22,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "dc2d4ee32bb1992e5fce8e0c19b2ee32",
     "url": "/static/media/card-border.dc2d4ee3.svg"
+  },
+  {
+    "revision": "bf03c8231f989b4aff9b42c7b453a413",
+    "url": "/static/media/heart.bf03c823.svg"
   },
   {
     "revision": "40cc4cd5e2d02f4a3c7280712d33f707",
