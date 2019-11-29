@@ -1,5 +1,24 @@
 @import "../../theme.scss";
+@import "../../mixins.scss";
 
-footer {
+.page-footer {
+  @include tape-pin(50px, 20px);
+
+  // overflow-x: ;
+
+  // overflow-x: hidden;
+  // overflow-y: visible;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
   margin-top: auto;
+  padding: 2rem;
+
+  width: 100%;
+
+  background-color: $dark-color;
+  color: $light-color;
 }

@@ -1,0 +1,39 @@
+$tape-image: url("./docs/tape.svg");
+
+@mixin tape($angle) {
+  position: absolute;
+  transform: rotate($angle);
+  content: $tape-image;
+}
+
+@mixin tape-pin($x-offset, $y-offset) {
+  position: relative;
+
+  &::before {
+    @include tape(35deg); // position: absolute;
+    top: -$y-offset;
+    right: -$x-offset;
+  }
+
+  &::after {
+    @include tape(-35deg);
+    top: -$y-offset;
+    left: -$x-offset;
+  }
+}
+
+@mixin tape-quote($x-offset, $y-offset) {
+  position: relative;
+
+  &::before {
+    @include tape(35deg); // position: absolute;
+    top: -$y-offset;
+    right: -$x-offset;
+  }
+
+  &::after {
+    @include tape(35deg);
+    bottom: -$y-offset;
+    left: -$x-offset;
+  }
+}

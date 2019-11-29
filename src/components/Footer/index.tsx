@@ -1,8 +1,15 @@
 import React from "react";
+import { Heart } from "../Icon";
 import "./Footer.scss";
 
 const Footer: React.FC = () => {
-  return <footer> footer </footer>;
+  return (
+    <footer className="page-footer">
+      <p className="text-thin">
+        от дане4ки с <Heart />
+      </p>
+    </footer>
+  );
 };
 
 export default Footer;
