@@ -97,14 +97,17 @@ a {
   color: $primary-color;
   text-decoration: none;
 
-  display: block;
+  display: inline;
 
-  transition: transform 0.1s ease-in-out;
+  border-bottom: 0px $primary-color solid;
+
+  transition: border 0.1s ease-in-out;
   box-sizing: border-box;
 
   &:hover {
     color: $active-color;
-    transform: translateY(-5px);
-    text-decoration: underline;
+    border-bottom: 4px $primary-color solid;
+    // transform: translateY(-5px);
+    // text-decoration: underline;
   }
 }
