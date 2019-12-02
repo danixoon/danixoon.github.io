@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Section from "../components/Section";
 import Container from "../components/Container";
 import SkillTree from "../components/SkillTree";
+import Project from "../components/Project";
 
 import "./App.scss";
 import { Note } from "../components/Card";
@@ -35,7 +36,24 @@ const App: React.FC = () => {
           </Container>
         </Section>
         <Section id="my-projects" header="Мои проекты" description="Здесь ты можешь видеть проекты, в которых я принимал участие, либо же разрабатывал в одиночку">
-          прив
+          <Project
+            header="Dragon Catch"
+            links={[]}
+            media={[]}
+          >
+            <>
+              Игра написанная на <strong>Unity</strong> специально для игрового джема Weekly Game Jam
+
+              <button className="btn">Играть</button>
+            </>
+            <>
+              <h3 className="text-thin mt-0"> Технологии создания </h3>
+              <ul>
+                <li> UnityEngine </li>
+                <li> C# </li>
+              </ul>
+            </>
+          </Project>
         </Section>
       </main>
       <Footer />

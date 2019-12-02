@@ -1,0 +1,35 @@
+@import "../../theme.scss";
+
+.project {
+    background-color: $dark-color;
+    color: $light-color;
+
+    padding: 1rem;
+
+    .project-header {
+        display: flex;
+
+        h2 {
+            width: 100%;
+        }
+        .project-cover {
+        flex: 1;
+        }
+        .project-media {
+            flex: 1;
+        }
+    }
+    .project-content {
+        display: flex;
+
+        .project-description {
+            flex: 1;
+            padding-right: 1rem;
+        }
+        .project-info {
+            flex: 1;
+            padding-left: 1rem;
+        }
+    }
+}
+
