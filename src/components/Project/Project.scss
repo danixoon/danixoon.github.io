@@ -1,35 +1,54 @@
 @import "../../theme.scss";
 
 .project {
-    background-color: $dark-color;
-    color: $light-color;
+  background-color: $dark-color;
+  color: $light-color;
 
-    padding: 1rem;
+  padding: 2rem;
 
-    .project-header {
-        display: flex;
+  .project-header {
+    display: flex;
 
-        h2 {
-            width: 100%;
-        }
-        .project-cover {
-        flex: 1;
-        }
-        .project-media {
-            flex: 1;
-        }
+    h2 {
+      width: 100%;
+      margin-bottom: 0;
     }
-    .project-content {
-        display: flex;
-
-        .project-description {
-            flex: 1;
-            padding-right: 1rem;
-        }
-        .project-info {
-            flex: 1;
-            padding-left: 1rem;
-        }
+    .project-cover {
+      flex: 1;
     }
+    .project-media {
+      flex: 1;
+    }
+  }
+  .project-content {
+    display: flex;
+
+    padding: 2rem 0rem;
+
+    .project-description {
+      flex: 1;
+      padding-right: 1rem;
+    }
+    .project-info {
+      flex: 1;
+      padding-left: 1rem;
+    }
+  }
+
+  .project-footer {
+    display: flex;
+    flex-flow: row-reverse;
+  }
+
+  .project-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 0.5rem;
+
+    svg {
+      margin-top: 1rem;
+    }
+  }
 }
-

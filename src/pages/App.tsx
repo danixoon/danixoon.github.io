@@ -5,10 +5,13 @@ import Footer from "../components/Footer";
 import Section from "../components/Section";
 import Container from "../components/Container";
 import SkillTree from "../components/SkillTree";
-import Project from "../components/Project";
+import Project, { ProjectLink } from "../components/Project";
 
 import "./App.scss";
 import { Note } from "../components/Card";
+
+import githubLogo, { ReactComponent as Github } from "../docs/logo/github.svg";
+import itchLogo, { ReactComponent as Itch } from "../docs/logo/itch.svg";
 
 const App: React.FC = () => {
   return (
@@ -38,13 +41,23 @@ const App: React.FC = () => {
         <Section id="my-projects" header="Мои проекты" description="Здесь ты можешь видеть проекты, в которых я принимал участие, либо же разрабатывал в одиночку">
           <Project
             header="Dragon Catch"
-            links={[]}
+            links={
+              <>
+                <ProjectLink src={githubLogo} />
+                {/* <Github /> */}
+                {/* </ProjectLink> */}
+                <ProjectLink src={itchLogo} />
+                {/* <Itch /> */}
+                {/* </ProjectLink> */}
+              </>
+            }
             media={[]}
           >
             <>
               Игра написанная на <strong>Unity</strong> специально для игрового джема Weekly Game Jam
-
-              <button className="btn">Играть</button>
+              <button className="btn" style={{ marginTop: "4rem" }}>
+                Играть
+              </button>
             </>
             <>
               <h3 className="text-thin mt-0"> Технологии создания </h3>

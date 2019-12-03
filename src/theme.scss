@@ -8,7 +8,7 @@ $muted-color: #bfbfbf;
 $active-color: #ff2e2e;
 $passive-color: #ff9f2e;
 
-$gradient-bg: linear-gradient(230deg, rgba(255,46,46,1) 0%, rgba(255,159,46,1) 100%);
+$gradient-bg: linear-gradient(230deg, rgba(255, 46, 46, 1) 0%, rgba(255, 159, 46, 1) 100%);
 
 $font-medium: 26px;
 $font-large: 36px;
@@ -62,18 +62,32 @@ $heart-icon: url("./docs/heart.svg");
 }
 
 .mt-0 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .btn {
-    color: $light-color;
-    background: $gradient-bg;
-    border-radius: 100px;
-    padding: 1.25rem 4rem;
-    border: none;
+  color: $light-color;
+  background: linear-gradient(167.48deg, $active-color 10%, $passive-color 130%);
+  background-clip: padding-box;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 52px;
+  padding: 1rem 6rem;
 
-    @extend .text-thin;
-    font-size: $font-medium;
+  border: 4px solid transparent;
+
+  @extend .text-light;
+
+  font-size: $font-medium;
+  // box-sizing: border-box;
+
+  transition: border 0.1s ease-in-out, transform 0.2s ease-in-out;
+
+  &:hover {
+    border: 4px solid white;
+    transform: translateY(-5px);
+    // background: white;
+    // color: $active-color;
+  }
 }
 
 body {
@@ -86,6 +100,10 @@ body {
 
   font-family: "Roboto", sans-serif;
   font-size: $font-medium;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
 }
 
 h2 {
