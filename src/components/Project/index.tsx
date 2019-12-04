@@ -2,6 +2,10 @@ import React, { useState } from "react";
 
 import "./Project.scss";
 import { Mark } from "../Icon";
+import Container from "../Container";
+import Gallery from "../Gallery";
+
+
 
 const { useSpring, animated, interpolate } = require("react-spring");
 
@@ -64,20 +68,26 @@ const Project: React.FC<React.PropsWithChildren<Props>> = props => {
   console.log(links);
 
   return (
-    <section className="project">
-      <header className="project-header">
-        <img className="project-cover" src={media[imgId]} />
-        <div className="project-media">{media.map((m, i) => i === imgId && <img onClick={() => handleMediaSelect(i)} src={m} key={m} />).filter(m => m)}</div>
+    
+      <section className="project">
+        <header className="project-header">
+          <img className="project-cover" src={media[imgId]} />
+          <div className="project-media">{media.map((m, i) => i === imgId && <img onClick={() => handleMediaSelect(i)} src={m} key={m} />).filter(m => m)}</div>
 
-        <h2>{header}</h2>
-      </header>
-      <section className="project-content container">
-        <div className="project-description">{description}</div>
-        <aside className="project-info">{info}</aside>
+          <h2>{header}</h2>
+        </header>
+        <Container>
+          <div className="project-content">
+            <div className="project-description">{description}</div>
+            <aside className="project-info">{info}</aside>
+          </div>
+        </Container>
+        <ProjectFooter>{React.Children.map(links, c => c)}</ProjectFooter>
+
+        {/* <footer className="project-footer">{links}</footer> */}
       </section>
-      <ProjectFooter>{React.Children.map(links, c => c)}</ProjectFooter>
-      {/* <footer className="project-footer">{links}</footer> */}
-    </section>
+      
+    
   );
 };
 

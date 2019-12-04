@@ -7,11 +7,15 @@ interface Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElem
 
 const Container: React.FC<PropsWithChildren<Props>> = props => {
   const { children, direction, ...rest } = props;
-  return (
-    <div {...rest} className="container" style={{ flexDirection: direction }}>
-      {children}
-    </div>
-  );
+
+  const child = React.Children.only(children) as React.ReactElement;
+  return React.cloneElement(child, { className: "container " + (child.props.className || "") });
+  // return (
+
+  //   <div {...rest} className="container" style={{ flexDirection: direction }}>
+  //     {children}
+  //   </div>
+  // );
 };
 
 export default Container;

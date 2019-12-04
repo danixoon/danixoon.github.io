@@ -1,0 +1,39 @@
+.gallery {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+
+  // width: min-content;
+
+  justify-content: center;
+  // height: 250px;
+
+  @media (max-width: 1080px) {
+    width: 100vw;
+    // flex-wrap: wrap;
+    // max-height: 500px;
+  }
+
+  .gallery-media {
+    user-select: none;
+    padding: 1rem 0rem;
+    // margin: 0.5rem 0;
+    width: 250px;
+    height: 150px;
+    border: 3px solid white;
+
+    flex: 1 0 25%;  
+
+    object-fit: cover;
+
+    transition: all 0.1s ease-in-out;
+
+    background: white;
+
+    &:hover {
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+      transform: scale(1.1);
+      z-index: 100;
+    }
+  }
+}
