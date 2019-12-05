@@ -1,0 +1,15 @@
+@import "../../theme.scss";
+
+.social-link {
+  margin: 1rem 0;
+  font-size: $font-small;
+}
+
+.social-img {
+  // display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
+  width: 48px;
+
+  object-fit: cover;
+}

@@ -1,19 +1,29 @@
 import React from "react";
 import * as _ from "lodash";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../layout/Header";
+import Footer from "../layout/Footer";
+
 import Section from "../components/Section";
 import Container from "../components/Container";
 import SkillTree from "../components/SkillTree";
 import Gallery from "../components/Gallery";
 import { Note } from "../components/Card";
-import Project, { ProjectLink } from "../components/Project";
+import Project, { ProjectLink } from "../layout/Project";
+import SocialLink from "../components/SocialLink";
+
+import Links from "../layout/Links";
 
 import "./App.scss";
 
 import githubLogo, { ReactComponent as Github } from "../docs/logo/github.svg";
 import itchLogo, { ReactComponent as Itch } from "../docs/logo/itch.svg";
+
+// Logotypes
+import vkLogoPng from "../docs/logo/vk.png";
+import gmailLogoPng from "../docs/logo/gmail.png";
+import githubLogoPng from "../docs/logo/github.png";
+import itchLogoPng from "../docs/logo/itch.png";
 
 import dragonCatch1 from "../docs/media/dragon-catch-1.png";
 
@@ -49,15 +59,15 @@ const App: React.FC = () => {
             header="Dragon Catch"
             links={
               <>
-                <ProjectLink src={githubLogo} />
-                <ProjectLink src={itchLogo} />
+                <ProjectLink href="https://github.com/danixoon" src={githubLogo} />
+                <ProjectLink href="https://danixoon.itch.io/dragon-catch" src={itchLogo} />
               </>
             }
             media={[]}
           >
             <>
               Игра написанная на <strong>Unity</strong> специально для игрового джема Weekly Game Jam
-              <button className="btn d-block" style={{ marginTop: "4rem" }}>
+              <button className="btn d-block" style={{ width: "100%", marginTop: "4rem"}}>
                 Играть
               </button>
             </>
@@ -71,6 +81,32 @@ const App: React.FC = () => {
           </Project>
           <Gallery sources={_.range(20).map(v => dragonCatch1)} />
         </Section>
+        <Links
+          data={[
+            {
+              label: "Соцсети",
+              links: [
+                <SocialLink href="https://vk.com/danux" socialImg={vkLogoPng}>
+                  vk.com/danux
+                </SocialLink>,
+                <SocialLink href="mailto:danixoon@gmail.com" socialImg={gmailLogoPng}>
+                  danixoon@gmail.com
+                </SocialLink>
+              ]
+            },
+            {
+              label: "Ссылки",
+              links: [
+                <SocialLink href="https://github.com/danixoon" socialImg={githubLogoPng}>
+                  github.com/danixoon
+                </SocialLink>,
+                <SocialLink href="https://danixoon.itch.io" socialImg={itchLogoPng}>
+                  danixoon.itch.io
+                </SocialLink>
+              ]
+            }
+          ]}
+        />
       </main>
       <Footer />
     </>

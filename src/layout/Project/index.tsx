@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 
 import "./Project.scss";
-import { Mark } from "../Icon";
-import Container from "../Container";
-import Gallery from "../Gallery";
-
-
+import { Mark } from "../../components/Icon";
+import Container from "../../components/Container";
+import Gallery from "../../components/Gallery";
 
 const { useSpring, animated, interpolate } = require("react-spring");
 
@@ -18,6 +16,7 @@ interface Props {
 
 interface ProjectLinkProps extends React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> {
   src: string;
+  href: string;
 }
 export const ProjectLink: React.FC<React.PropsWithChildren<ProjectLinkProps>> = props => {
   const [{ opacity, y, scale }, setLink] = useSpring(() => ({ opacity: 0, y: 20, scale: 1, config: { mass: 1, tension: 500, friction: 20 } }));
@@ -41,10 +40,10 @@ export const ProjectLink: React.FC<React.PropsWithChildren<ProjectLinkProps>> = 
   const MarkIcon = animated((pr: any) => <Mark {...pr} />);
 
   return (
-    <div className="project-link" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <a href={props.href} className="project-link" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <Icon style={{ transform: iconTransform }} />
       <MarkIcon style={{ fillOpacity, transform: markTransform }} />
-    </div>
+    </a>
   );
 };
 
@@ -68,26 +67,23 @@ const Project: React.FC<React.PropsWithChildren<Props>> = props => {
   console.log(links);
 
   return (
-    
-      <section className="project">
-        <header className="project-header">
-          <img className="project-cover" src={media[imgId]} />
-          <div className="project-media">{media.map((m, i) => i === imgId && <img onClick={() => handleMediaSelect(i)} src={m} key={m} />).filter(m => m)}</div>
+    <section className="project">
+      <header className="project-header">
+        <img className="project-cover" src={media[imgId]} />
+        <div className="project-media">{media.map((m, i) => i === imgId && <img onClick={() => handleMediaSelect(i)} src={m} key={m} />).filter(m => m)}</div>
 
-          <h2>{header}</h2>
-        </header>
-        <Container>
-          <div className="project-content">
-            <div className="project-description">{description}</div>
-            <aside className="project-info">{info}</aside>
-          </div>
-        </Container>
-        <ProjectFooter>{React.Children.map(links, c => c)}</ProjectFooter>
+        <h2>{header}</h2>
+      </header>
+      <Container>
+        <div className="project-content">
+          <div className="project-description">{description}</div>
+          <aside className="project-info">{info}</aside>
+        </div>
+      </Container>
+      <ProjectFooter>{React.Children.map(links, c => c)}</ProjectFooter>
 
-        {/* <footer className="project-footer">{links}</footer> */}
-      </section>
-      
-    
+      {/* <footer className="project-footer">{links}</footer> */}
+    </section>
   );
 };
 

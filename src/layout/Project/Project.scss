@@ -27,11 +27,11 @@
 
     .project-description {
       flex: 1;
-      padding-right: 1rem;
+      padding: 1rem;
     }
     .project-info {
       flex: 1;
-      padding-left: 1rem;
+      padding: 1rem;
     }
   }
 
@@ -41,6 +41,7 @@
   }
 
   .project-link {
+    border: none;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -10,6 +10,7 @@ $passive-color: #ff9f2e;
 
 $gradient-bg: linear-gradient(230deg, rgba(255, 46, 46, 1) 0%, rgba(255, 159, 46, 1) 100%);
 
+$font-small: 22px;
 $font-medium: 26px;
 $font-large: 36px;
 $font-larger: 48px;
@@ -19,6 +20,10 @@ $heart-icon: url("./docs/heart.svg");
 
 .color-primary {
   color: $primary-color;
+}
+
+.color-secondary {
+  color: $secondary-color;
 }
 
 .color-text {
@@ -109,6 +114,21 @@ button {
 h2 {
   @extend .text-thin;
   font-size: $font-max;
+}
+
+h3 {
+  @extend .text-thin;
+  font-size: $font-larger;
+}
+
+h4 {
+  @extend .text-light;
+  font-size: $font-large;
+}
+
+h5 {
+  @extend .text-light;
+  font-size: $font-medium;
 }
 
 strong {

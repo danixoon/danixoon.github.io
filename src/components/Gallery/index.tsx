@@ -48,7 +48,7 @@ const Gallery: React.FC<Props> = props => {
       // const _x = interpolate([x], (x: any) => `${x}`);
       // console.log(_x);
 
-      setScroll({ x: divRef.current.scrollLeft - delta[0] * 20, reset: state.first });
+      setScroll({ x: divRef.current.scrollLeft - delta[0] * 15, reset: state.first });
     }
     if (state.first) dragging = true;
     if (state.last) dragging = false;
@@ -57,6 +57,7 @@ const Gallery: React.FC<Props> = props => {
   const handleImageSelect = (e: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
     // setScroll({ x: e.target., reset: true });
     const { current: div } = divRef;
+
     if (div && !dragging) {
       // const x = div.scrollLeft + (e.currentTarget.x - div.offsetLeft) - div.clientWidth / 2 + 125 / 2;
       const x = div.scrollLeft + e.currentTarget.x - div.clientWidth / 2 + e.currentTarget.width / 2 - div.offsetLeft;
@@ -69,7 +70,7 @@ const Gallery: React.FC<Props> = props => {
     // <Container>
     <div ref={c => (divRef.current = c as HTMLDivElement)} className="gallery">
       {sources.map((s, i) => (
-        <Image onClick={handleImageSelect} src={s} key={i} {...bindImageDrag()} />
+        <Image /* onClick={handleImageSelect}*/ src={s} key={i} {...bindImageDrag()} />
       ))}
     </div>
     // </Container>

@@ -1,0 +1,12 @@
+.links {
+  margin-bottom: 5rem;
+  padding: 0 4rem;
+
+  @media (max-width: 1080px) {
+    padding: 1rem;
+  }
+
+  .link-group {
+    padding: 2rem;
+  }
+}

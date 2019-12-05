@@ -1,5 +1,5 @@
 import React from "react";
-import { Heart } from "../Icon";
+import { Heart } from "../../components/Icon";
 import "./Footer.scss";
 
 const Footer: React.FC = () => {
