@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "184ecf39dbfe456f495ea55eb12eec97",
+    "revision": "381906da173baa715c288ff2b1e3a756",
     "url": "/index.html"
   },
   {
-    "revision": "491fa936d2c624db01e2",
-    "url": "/static/css/main.d93b13e2.chunk.css"
+    "revision": "4f9f9ce382adbb7a9324",
+    "url": "/static/css/main.70f9e85e.chunk.css"
   },
   {
     "revision": "bd24a7b7a0b9fd80d6cc",
     "url": "/static/js/2.acef875d.chunk.js"
   },
   {
-    "revision": "491fa936d2c624db01e2",
-    "url": "/static/js/main.c90a0f34.chunk.js"
+    "revision": "4f9f9ce382adbb7a9324",
+    "url": "/static/js/main.4fee5df5.chunk.js"
   },
   {
     "revision": "3176bbf8c1ce837fb3b0",
@@ -28,16 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/dragon-catch-1.d3bf8f4d.png"
   },
   {
-    "revision": "a7336b4206ba6a65073b91605d1b7d40",
-    "url": "/static/media/github.a7336b42.svg"
-  },
-  {
     "revision": "bf03c8231f989b4aff9b42c7b453a413",
     "url": "/static/media/heart.bf03c823.svg"
-  },
-  {
-    "revision": "11cf5287995e247fd8c9152e58d3ebf5",
-    "url": "/static/media/itch.11cf5287.svg"
   },
   {
     "revision": "40cc4cd5e2d02f4a3c7280712d33f707",
