@@ -72,26 +72,39 @@ $heart-icon: url("./docs/heart.svg");
 
 .btn {
   color: $light-color;
-  background: linear-gradient(167.48deg, $active-color 10%, $passive-color 130%);
-  background-clip: padding-box;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-  border-radius: 52px;
-  padding: 1rem 6rem;
+  // background: linear-gradient(167.48deg, $active-color 10%, $passive-color 130%);
+  // background-clip: padding-box;
+  background-color: $primary-color;
+  box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.25);
+  background-repeat: round;
+  border-radius: 50px;
 
-  border: 4px solid transparent;
+  padding: 1rem 6rem;
+  border: none;
+  outline: none;
+  // box-shadow: 0 0 0 0px white;
+
+  // border: 4px solid rgba(0, 0, 0, 0);
 
   @extend .text-light;
 
   font-size: $font-medium;
   // box-sizing: border-box;
 
-  transition: border 0.1s ease-in-out, transform 0.2s ease-in-out;
+  transition: box-shadow 0.1s ease-in-out, transform 0.05s ease-out, background-color 0.1s ease-out;
 
   &:hover {
-    border: 4px solid white;
-    transform: translateY(-5px);
-    // background: white;
-    // color: $active-color;
+    // box-shadow: 0 0 0 4px white;
+
+    // transform: translateY(-5px);
+    background: white;
+    color: $active-color;
+  }
+
+  &:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
+    // box-shadow: 0 0 0 4px white;
   }
 }
 
@@ -159,10 +172,18 @@ a {
   transition: border 0.1s ease-in-out;
   box-sizing: border-box;
 
+  &:visited {
+    color: #3d5a79;
+  }
+
   &:hover {
-    color: $active-color;
+    color: $primary-color;
     border-bottom: 4px $primary-color solid;
     // transform: translateY(-5px);
     // text-decoration: underline;
   }
+}
+
+img.icon {
+  width: 48px;
 }

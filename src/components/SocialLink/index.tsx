@@ -9,7 +9,7 @@ const SocialLink: React.FC<React.PropsWithChildren<Props>> = props => {
   const { style, socialImg, children, ...rest } = props;
   return (
     <div className="social-link">
-      <img className="social-img" src={socialImg} alt="" />
+      <img className="icon social-icon" src={socialImg} alt="" />
       <a {...rest} className={"color-secondary " + (props.className || "")} style={{ ...style }}>
         {children}
       </a>

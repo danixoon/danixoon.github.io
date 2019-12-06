@@ -19,15 +19,15 @@ interface ProjectLinkProps extends React.DetailedHTMLProps<React.ImgHTMLAttribut
   href: string;
 }
 export const ProjectLink: React.FC<React.PropsWithChildren<ProjectLinkProps>> = props => {
-  const [{ opacity, y, scale }, setLink] = useSpring(() => ({ opacity: 0, y: 20, scale: 1, config: { mass: 1, tension: 500, friction: 20 } }));
+  const [{ opacity, y, scale }, setLink] = useSpring(() => ({ opacity: 0, y: 2, scale: 1, config: { mass: 1, tension: 500, friction: 20 } }));
   const handleMouseEnter = () => {
-    setLink({ opacity: 1, y: 0, scale: 1.2 });
+    setLink({ opacity: 1, y: 0.5, scale: 1.2 });
   };
   const handleMouseLeave = () => {
-    setLink({ opacity: 0, y: 20, scale: 1 });
+    setLink({ opacity: 0, y: 2, scale: 1 });
   };
 
-  const markTransform = interpolate([y.interpolate((v: any) => v) as any], (y: any) => `translateY(${y}px)`) as any;
+  const markTransform = interpolate([y.interpolate((v: any) => v) as any], (y: any) => `translateY(${y}rem)`) as any;
   const iconTransform = interpolate([scale.interpolate((v: any) => v) as any], (s: any) => `scale(${s})`) as any;
   const fillOpacity = opacity.interpolate((v: any) => v) as any;
 
@@ -36,7 +36,7 @@ export const ProjectLink: React.FC<React.PropsWithChildren<ProjectLinkProps>> = 
   // console.log(props.children);
 
   // const Icon = animated((pr: any) => React.cloneElement(React.Children.only(props.children as any), pr));
-  const Icon = animated((pr: any) => <img {...pr} src={props.src} />);
+  const Icon = animated((pr: any) => <img className="icon" {...pr} src={props.src} />);
   const MarkIcon = animated((pr: any) => <Mark {...pr} />);
 
   return (

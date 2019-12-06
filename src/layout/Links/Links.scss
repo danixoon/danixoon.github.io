@@ -1,4 +1,5 @@
 .links {
+  align-items: center;
   margin-bottom: 5rem;
   padding: 0 4rem;
 
@@ -7,6 +8,6 @@
   }
 
   .link-group {
-    padding: 2rem;
+    flex: 1;
   }
 }

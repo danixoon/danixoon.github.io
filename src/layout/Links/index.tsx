@@ -14,7 +14,7 @@ interface Props {
 const Links: React.FC<Props> = props => {
   const { data, ...rest } = props;
   const LinkGroupComponent: React.FC<LinkGroup> = props => (
-    <div className="link-group" style={{ flex: 1 }}>
+    <div className="link-group">
       <h5>{props.label}</h5>
       {props.links}
       {/*  */}

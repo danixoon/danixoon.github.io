@@ -16,8 +16,8 @@ import Links from "../layout/Links";
 
 import "./App.scss";
 
-import githubLogo, { ReactComponent as Github } from "../docs/logo/github.svg";
-import itchLogo, { ReactComponent as Itch } from "../docs/logo/itch.svg";
+import githubLogoWhitePng from "../docs/logo/github-white.png";
+import itchLogoWhitePng from "../docs/logo/itch-white.png";
 
 // Logotypes
 import vkLogoPng from "../docs/logo/vk.png";
@@ -59,8 +59,8 @@ const App: React.FC = () => {
             header="Dragon Catch"
             links={
               <>
-                <ProjectLink href="https://github.com/danixoon" src={githubLogo} />
-                <ProjectLink href="https://danixoon.itch.io/dragon-catch" src={itchLogo} />
+                <ProjectLink href="https://github.com/danixoon" src={githubLogoWhitePng} />
+                <ProjectLink href="https://danixoon.itch.io/dragon-catch" src={itchLogoWhitePng} />
               </>
             }
             media={[]}
